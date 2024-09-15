@@ -14,8 +14,8 @@ public class JavaBeansAndBytes {
     int yearFounded;
     int discount;
     double drinkChoiceDecimal;
-    public CoffeeDrink Order1;
-    public CoffeeDrink Order2;
+//    public CoffeeDrink Order1;
+//    public CoffeeDrink Order2;
 
     public static void main(String[] args) {
         // Create a new CoffeeShop instance to run everything.
@@ -51,8 +51,16 @@ public class JavaBeansAndBytes {
 
         // TODO
         // Create two CoffeeDrink objects
-        Order1 = new CoffeeDrink(3, "Vanila",true);
-        Order2 = new CoffeeDrink(10, "Pumpkin", false);
+        CoffeeDrink Order1 = new CoffeeDrink(3, "Vanila",true);
+        CoffeeDrink Order2 = new CoffeeDrink(10, "Pumpkin", false);
+
+        Order2.setFlavor("Vaanilla");
+        specialOfTheDay(Order1.getFlavor());
+
+        Order2.setNumberOfCups(10000);
+        Order2.setHasWhippedCream(true);
+
+        System.out.println("The order has been modified to have " + Order2.getNumberOfCups() + " cups and is the flavor " + Order2.getFlavor() + " and it has whipped cream: " + Order2.getHasWhippedCream() );
 
 
 
